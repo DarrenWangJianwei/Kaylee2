@@ -17,15 +17,6 @@ function App() {
       return () => window.removeEventListener("scroll", onScroll);
   },[windowScrollY]);
 
-
-  const topBarToggle = () =>{
-    if(windowScrollY > 40){
-        return {height: '80px',visibility:'visible'}
-    }
-    return {height: '0px',visibility:'hidden'};
-  }
-  let location = useLocation();
-  console.log("aa");
   return (
     <>
 
