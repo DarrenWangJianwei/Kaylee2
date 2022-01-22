@@ -1,0 +1,17 @@
+.container{
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* <= This one */
+    opacity: 0.8;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#ffffff;
+}
+
+.container h1{
+    padding:200px 20px;
+    font-size:calc(2em + 1.2vw);
+    line-height: normal;
+}

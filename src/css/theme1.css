@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'PoiretOne-Regular';
+    src: local('PoiretOne-Regular'), url(../fonts/Poiret_One/PoiretOne-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Impact"; 
+    src: local('Impact'), url(../fonts/Impact-Font/impact.ttf) format('truetype');
+}
+
+body{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin:0;
+}
+
+section:nth-child(n+3){
+    margin-top:20vh;
+}
+.noMarginTop {
+    margin-top:0vh !important;
+}
+
+@media screen and (max-width: 420px) {
+    .marginTopMobileVersion{
+        margin-top:15vh;
+    }
+  }
+p,a{
+    font-family: 'PoiretOne-Regular', sans-serif;
+    font-weight: bold;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
+
+.title {
+    font-size: 3rem;
+    line-height: 66px;
+}
+.titleMUJI{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.titleMUJI span{
+    color:#770921
+}
+.centrelizeText{
+    text-align: center;
+}
+
+.primaryButton{
+    border:1px solid black;
+    padding:15px 30px;
+    font-family: europa, sans-serif;
+    font-size: 0.5rem;
+    font-weight: 600;
+    line-height: 1em;
+    letter-spacing: 0.3em;
+    color:black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.primaryButton:hover{
+    border:1px solid black;
+    color:rgb(226, 226, 226);
+    background-color: #333333;
+}
+
+.buttonWithImage{
+    margin-top: 40px;
+    background-color: transparent;
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+.descriptionDiv p{
+    font-size: 1.5rem;
+    line-height: normal;
+    color: rgb(0,0,0);
+    font-weight:lighter;
+    line-height: 2rem;
+}
+
+.subDescription{
+    background-color: #e7e7e9d2;
+    width: fit-content;
+    margin:auto;
+    font-size: 0.8rem;
+    margin-bottom:3px;
+    letter-spacing: 2px;
+}
+
+.margin-top-2rem{
+    margin-top: 2rem;
+}
+
+.hover-underline-animation {
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    color: #000;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

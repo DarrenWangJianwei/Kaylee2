@@ -1,0 +1,64 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    margin-top:20px;
+    overflow: hidden;
+}
+.navContainer{
+    flex:1 1 20%;
+}
+.logo{
+    padding:2vw;
+    height:35%;
+}
+.nav{
+    width: 60%;
+    height:65%;
+    font-size: 1.2vw;
+}
+.map{
+    flex:1 1 67%;
+    position:relative;
+}
+.map img{
+    height: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.subLogo{
+    background-image: url("../images/logo_2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:10%;
+    height:8%;
+    position:absolute;
+    left:35%;
+    bottom: -5%;
+    -webkit-transform: translateX(-100%) translateY(-100%);
+    -moz-transform: translateX(-100%) translateY(-100%);
+    -ms-transform: translateX(-100%) translateY(-100%);
+    -o-transform: translateX(-100%) translateY(-100%);
+    transform: translateX(-100%) translateY(-100%);
+}
+
+@media screen and (max-width:640px){
+    .container{
+        flex-direction: column;
+        margin:0;
+    }
+    .navContainer{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav{
+        height:200px;
+    }
+    .logo{
+        padding:5vw;
+    }
+    .map{
+        margin-bottom:150px;
+    }
+
+}

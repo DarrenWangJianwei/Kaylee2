@@ -1,0 +1,75 @@
+.hamNavBar{
+    position: relative;
+    height:100%;
+}
+.hamNavBar button {
+    position: absolute;
+    left:10%;
+    top:10px;
+    z-index: 11;
+    cursor: pointer;
+    background: transparent;;
+    border: none;
+}
+
+.menuNav {
+    height:100%;
+    position:absolute;
+    overflow-y: scroll;
+    transform: scaleY(0); 
+    transform-origin: top; 
+    width: 100%;
+    overflow: hidden;
+    z-index: 9;
+    transition:0.5s;
+    padding:0;
+    margin:0;
+    font-size: 1.5em;
+    background-color: #5d5040;
+}
+
+.menuNav.showMenu {
+    transform: scaleY(1);  
+}
+.menuNav ul{
+    list-style: none;
+    background-color: #5d5040;
+}
+.menuNav ul li a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.menuNav ul li a:after{
+    background-color: #ffffff;
+}
+
+.menuNav ul li{
+    line-height: 2em;
+    text-align: end;
+    margin:0 15px;
+}
+
+.menuNav ul li:first-child{
+    margin-top:calc(50px + 20%);
+}
+
+
+
+@media screen and (max-width:640px){
+    .hamNavBar button {
+        left:auto;
+        right:10px;
+        top:10px;
+    }
+    .menuNav ul li{
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width:426px){
+    .menuNav ul li{
+        line-height: 3.5em;
+    }
+    
+}

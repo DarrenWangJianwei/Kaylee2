@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    height:100vh;
+    min-height: 700px;
+}
+
+.white_space{
+    width:15.5%;
+    position: relative;
+}
+
+.content{
+    width:84.5%;
+    position:relative;
+}
+
+.white_space_footBar{
+    height:110px;
+    width:100%;
+    background-color: #292c25;
+    position: absolute;
+    bottom:0px;
+}
+
+.content_wrapper{
+    position: absolute;
+    left:-7%;
+    top:240px;
+}
+
+@media screen and (max-width: 1200px) {
+    .white_space{
+        display: none;
+    }
+    .content{
+        width:100%;
+    }
+    .content_wrapper{
+        left:10%;
+    }    
+}
+
+.content_wrapper h5{
+    margin:0;
+}
+
+.content_image{
+    width:100%;
+    height:100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.content_image img{
+    max-height:fit-content; 
+    max-width: 100%;
+}

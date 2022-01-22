@@ -1,0 +1,19 @@
+.container{
+    background-color: black;
+    color:#cecece;
+}
+
+.container p{
+    line-height: 4em;
+    font-size: 0.8em;
+    margin:0;
+    margin-left: 2em;
+}
+
+@media screen and (max-width: 960px) {
+    .container p{
+        text-align: center;
+        margin:0;
+    }
+}
+  

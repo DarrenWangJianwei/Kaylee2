@@ -1,0 +1,78 @@
+.markerContainer{
+    position:absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+}
+.detailContainer{
+    position:absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+}
+.marker{
+    display: inline-block;
+    position: absolute;
+    background-image: url("../images/iconmonstr-circle-1-32.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: calc(1vw + 8px);
+    height: calc(1vw + 8px);
+    cursor: pointer;
+    z-index: 9;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.markerDetail{
+    transform: scaleY(0); 
+    position: absolute;
+    z-index: 10;
+    transform-origin: top; 
+    overflow: hidden;
+    transition:0.5s;
+    background-color: rgba(226, 226, 226, 0.5);
+    width:250px;
+    font-size: 1em;
+    padding:5px;
+    border-radius: 5%;
+    max-height:20vw;
+    overflow-y:auto;
+
+}
+.markerDetailShowLeftSide{
+    left:-250px;
+}
+
+.markerContainer h4,p{
+    margin:0;
+}
+
+.markerDetail.showDetail {
+    transform: scaleY(1);  
+}
+
+@media screen and (max-width:640px){
+    .markerDetail{
+        left:0;
+    }
+    .detailContainer{
+        position: unset;
+    }
+    .markerDetail{
+        width:100%;
+        background-color: black;
+        color:white;
+        font-size: 0.5em;
+        padding:15px;
+        height:150px;
+        border-radius: 0;
+        max-height:unset;
+        transform-origin:center;
+    }
+}

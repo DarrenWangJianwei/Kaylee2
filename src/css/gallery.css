@@ -1,0 +1,95 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.gallery-container {
+  padding: 0.9375rem 0;
+}
+
+.gallery-container h1 {
+  margin: 2rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+@media (min-width: 20em) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 34em) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 60em) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.img-hover-container{
+  position:relative;
+  cursor: pointer;
+}
+
+.img-hover-zoom {
+  background-color: rgb(250, 250, 250);
+  width:100%;
+  overflow: hidden; 
+}
+
+.img-hover-zoom img {
+  width: 100%;
+  transition: transform .4s ease;
+}
+
+.img-hover-info{
+  position: absolute;
+  text-align: center;
+  display:grid;
+  place-content:center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .4s ease;
+  background-color: #ffffff;
+}
+
+.img-hover-info h5{
+  font-size: larger;
+  margin:0;
+  text-transform: uppercase;
+  letter-spacing:3px;
+}
+
+.img-hover-info p{
+  font-weight: 200;
+  font-size: medium;
+  letter-spacing:2px;
+}
+
+.img-hover-info img{
+  margin:auto;
+}
+
+.img-hover-container:hover .img-hover-info{
+  opacity: 0.6;
+}
+
+.img-hover-container:hover .img-hover-zoom img{
+  transform: scale(1.2);
+}
+
